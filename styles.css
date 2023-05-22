@@ -1,0 +1,120 @@
+body {
+  background-image: url("./assets/Asset.png");
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#form-container {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 40px;
+  columns: 1;
+  width: 50%;
+  height: 75%;
+  padding: 5px;
+  font-family: "SF Pro Display", sans-serif;
+  color: #ffffff;
+}
+
+#headline {
+  grid-row: 1;
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: bolder;
+  height: min-content;
+}
+
+#subtext {
+  grid-row: 2;
+  font-size: 1.5em;
+  line-height: 1em;
+}
+
+#agreement-text {
+  grid-row: 4;
+  font-size: 1.25em;
+  line-height: 1em;
+}
+
+#user-inputs {
+  display: grid;
+  column-gap: 1em;
+  row-gap: 1em;
+  grid-template-rows: [row-1-start] 1fr [row-2-start] 1fr [row-2-end];
+  grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-2-end];
+}
+
+.small-input {
+  grid-column: span 1;
+  height: 3em;
+  padding-left: 0.75em;
+  background-color: black;
+  border: #7e7e7e solid 2px;
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-family: "SF Pro Display";
+  font-size: medium;
+  font-weight: 600;
+}
+
+.large-input {
+  grid-column-start: span 2;
+  height: 3em;
+  padding-left: 0.75em;
+  background-color: #000000;
+  border: #2a7d3c solid 2px;
+  border-radius: 10px;
+
+  color: #ffffff;
+  font-family: "SF Pro Display";
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.submit-button {
+  width: calc(50% - 1em);
+  height: 3em;
+  border-radius: 10px;
+  border-style: none;
+  font-family: "SF Pro Display";
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.submit-button:hover {
+  background: #dcdcdcf4;
+}
+
+.submit-button:active {
+  background: #dcdcdc;
+}
+
+::placeholder {
+  color: #ffffff;
+  font-family: "SF Pro Display";
+  font-size: medium;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src:
+    local("SF Pro Display"), 
+    url("./assets/fonts/SFProDisplay-Regular.woff2") format('woff2'),
+    url("./assets/fonts/SFProDisplay-Regular.woff") format('woff');
+}
